@@ -35,6 +35,9 @@ def get_file_modified_time_utc(file_path):
     """
     Gets the UTC timezone-aware modified time of a file at the given file path
     """
+    if settings.DEFAULT_FILE_STORAGE == 'django.core.files.storage.FileSystemStorage':
+        return pytz.utc.localize(datetime.datetime.utcfromtimestamp(os.path.getmtime(default_storage.path(file_path))))
+
     file_timezone = pytz.utc
     return file_timezone.localize(
         default_storage.modified_time(file_path)
