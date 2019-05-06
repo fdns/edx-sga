@@ -149,7 +149,7 @@ msgstr "Solución"
 
 #: templates/staff_graded_assignment/show.html:15
 msgid "Upload a different file"
-msgstr "Subit un archivo diferente"
+msgstr "Subir un archivo diferente"
 
 #: templates/staff_graded_assignment/show.html:17
 msgid "Upload your assignment"
