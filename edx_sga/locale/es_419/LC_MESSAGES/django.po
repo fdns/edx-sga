@@ -79,7 +79,7 @@ msgstr "Nombre del archivo de retroalimentación"
 
 #: sga.py:132
 msgid "The name of the annotated file uploaded for this assignment."
-msgstr "Nombre del archivo de retroalimentación subido a este trabajo."
+msgstr "Nombre del archivo de retroalimentación ingresado a este trabajo."
 
 #: sga.py:136
 msgid "Mime type of annotated file"
@@ -87,7 +87,7 @@ msgstr "Tipo mime del archivo de retroalimentación"
 
 #: sga.py:139
 msgid "The mimetype of the annotated file uploaded for this assignment."
-msgstr "Tipo mime del archivo de anotaretroalimentaciónción subido a este trabajo."
+msgstr "Tipo mime del archivo de anotaretroalimentaciónción enviado a este trabajo."
 
 #: sga.py:143
 msgid "Timestamp"
@@ -95,7 +95,7 @@ msgstr "Fecha"
 
 #: sga.py:146
 msgid "When the annotated file was uploaded"
-msgstr "Cuando el archivo de retroalimentación fue subido"
+msgstr "Cuando el archivo de retroalimentación fue enviado"
 
 #: showanswer.py:22
 msgid "Show Answer"
@@ -157,7 +157,7 @@ msgstr "Subir tu trabajo"
 
 #: templates/staff_graded_assignment/show.html:26
 msgid "File uploaded"
-msgstr "Archivo subido"
+msgstr "Archivo enviado"
 
 #: templates/staff_graded_assignment/show.html:31
 #, python-format
@@ -186,7 +186,7 @@ msgstr "Nombre de archivo"
 
 #: templates/staff_graded_assignment/show.html:71
 msgid "Uploaded"
-msgstr "Subido"
+msgstr "Enviado"
 
 #: templates/staff_graded_assignment/show.html:72
 msgid "Submitted"
@@ -230,7 +230,7 @@ msgstr "Ingresar Calificación"
 
 #: templates/staff_graded_assignment/show.html:130
 msgid "Upload annotated file"
-msgstr "Subir archivo de calificación"
+msgstr "Subir archivo de retroalimentación"
 
 #: templates/staff_graded_assignment/show.html:143
 msgid "Grade Submissions"
@@ -238,7 +238,7 @@ msgstr "Calificar Envíos"
 
 #: templates/staff_graded_assignment/show.html:151
 msgid "Download All Submissions"
-msgstr ""
+msgstr "Descargar Todos los Envíos"
 
 #: templates/staff_graded_assignment/show.html:155
 msgid "Loading..."
