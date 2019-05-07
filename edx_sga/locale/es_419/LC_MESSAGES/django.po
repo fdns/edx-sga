@@ -170,7 +170,7 @@ msgstr "Archivo de retroalimentación del instructor"
 
 #: templates/staff_graded_assignment/show.html:40
 msgid "This assignment has not yet been graded."
-msgstr "Este trabajo aún no ha sido graduado."
+msgstr "Este trabajo aún no ha sido evaluado."
 
 #: templates/staff_graded_assignment/show.html:68
 msgid "Username"
