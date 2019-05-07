@@ -43,7 +43,9 @@
         </p>
         <% if (upload_allowed) { %>
           <p>
-            <a class="button finalize-upload">Submit</a>
+            <button type="button finalize-upload" class="submit btn-brand">
+              <span class="">{% trans "Submit" %}</span>
+            </button>
           </p>
         <% } %>
       </div>
