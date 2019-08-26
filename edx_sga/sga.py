@@ -413,7 +413,7 @@ class StaffGradedAssignmentXBlock(StudioEditableXBlockMixin, ShowAnswerXBlockMix
         require(self.is_course_staff())
         score = request.params.get('grade', None)
         module = self.get_student_module(request.params['module_id'])
-        if not score:
+        if not score and score != 0:
             return Response(
                 json_body=self.validate_score_message(
                     module.course_id,
