@@ -29,7 +29,9 @@
         </p>
         <p>
           <% if (graded) { %>
-            {% blocktrans %}Your score is <%= graded.score %> / <%= max_score %>{% endblocktrans %}<br/>
+            <% if (max_score > 0) { %>
+              {% blocktrans %}Your score is <%= graded.score %> / <%= max_score %>{% endblocktrans %}<br/>
+            <% } %>
             <% if (graded.comment) { %>
               <b>{% trans "Instructor comment" %}</b> <%= graded.comment %><br/>
             <% } %>
