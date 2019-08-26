@@ -774,9 +774,9 @@ class StaffGradedAssignmentXBlock(StudioEditableXBlockMixin, ShowAnswerXBlockMix
         score = self.score
         if score is not None:
             graded = {'score': score, 'comment': force_text(self.comment)}
-        elif self.max_score() == 0 and (self.comment is not None or annotated is not None):
+        elif self.max_score() == 0 and (self.comment != '' or annotated is not None):
             # When the sga is not grade (max_score is zero), show results when the submission is commented or annotated
-            graded = {'score': score, 'comment': force_text(self.comment)}
+            graded = {'score': 0, 'comment': force_text(self.comment)}
         else:
             graded = None
 
