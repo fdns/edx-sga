@@ -13,7 +13,7 @@ from zipfile import ZipFile
 import pkg_resources
 import pytz
 
-from courseware.models import StudentModule  # lint-amnesty, pylint: disable=import-error
+from lms.djangoapps.courseware.models import StudentModule  # lint-amnesty, pylint: disable=import-error
 from django.conf import settings  # lint-amnesty, pylint: disable=import-error
 from django.core.exceptions import PermissionDenied  # lint-amnesty, pylint: disable=import-error
 from django.core.files import File  # lint-amnesty, pylint: disable=import-error
@@ -21,7 +21,7 @@ from django.core.files.storage import default_storage  # lint-amnesty, pylint: d
 from django.template import Context, Template  # lint-amnesty, pylint: disable=import-error
 from django.utils.encoding import force_text  # pylint: disable=import-error
 from django.utils.timezone import now as django_now  # pylint: disable=import-error
-from django.utils.translation import ugettext_lazy as _  # pylint: disable=import-error
+from django.utils.translation import ugettext as _  # pylint: disable=import-error
 from safe_lxml import etree  # pylint: disable=import-error
 from student.models import user_by_anonymous_id  # lint-amnesty, pylint: disable=import-error
 from submissions import api as submissions_api  # lint-amnesty, pylint: disable=import-error
