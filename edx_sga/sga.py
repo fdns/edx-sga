@@ -74,7 +74,7 @@ class StaffGradedAssignmentXBlock(StudioEditableXBlockMixin, ShowAnswerXBlockMix
     """
     has_score = True
     icon_class = 'problem'
-    STUDENT_FILEUPLOAD_MAX_SIZE = 4 * 1000 * 1000  # 4 MB
+    STUDENT_FILEUPLOAD_MAX_SIZE = 40 * 1000 * 1000  # 40 MB
     editable_fields = ('display_name', 'points', 'weight', 'showanswer', 'solution')
 
     display_name = String(
@@ -407,7 +407,7 @@ class StaffGradedAssignmentXBlock(StudioEditableXBlockMixin, ShowAnswerXBlockMix
         require(self.is_course_staff())
         score = request.params.get('grade', None)
         module = self.get_student_module(request.params['module_id'])
-        if not score:
+        if not score and score != 0:
             return Response(
                 json_body=self.validate_score_message(
                     module.course_id,
@@ -771,6 +771,9 @@ class StaffGradedAssignmentXBlock(StudioEditableXBlockMixin, ShowAnswerXBlockMix
         score = self.score
         if score is not None:
             graded = {'score': score, 'comment': force_text(self.comment)}
+        elif self.max_score() == 0 and (self.comment != '' or annotated is not None):
+            # When the sga is not grade (max_score is zero), show results when the submission is commented or annotated
+            graded = {'score': 0, 'comment': force_text(self.comment)}
         else:
             graded = None
 
